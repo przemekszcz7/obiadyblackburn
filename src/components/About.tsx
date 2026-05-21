@@ -110,9 +110,6 @@ export default function About() {
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute bottom-1 left-1 bg-[#1C1C1C] text-[#FAF6F0] text-[8px] uppercase tracking-widest px-1 py-0.5">
-                    Gulasz
-                  </div>
                 </div>
 
                 {/* Photo 4: Lower right frame, red border accent */}
@@ -126,9 +123,6 @@ export default function About() {
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
-                  <div className="absolute top-1 right-1 bg-[#C0392B] text-[#FAF6F0] text-[8px] uppercase tracking-widest px-1 py-0.5">
-                    Świeże i Rumiane
-                  </div>
                 </div>
 
                 {/* Photo 5: Miniature detail frame, tucked in back-right */}
