@@ -1,0 +1,6 @@
+{
+  "name": "Domowe Obiady Blackburn",
+  "description": "Tradycyjne polskie domowe obiady w Blackburn - pyszne, ciepłe i przygotowywane z sercem.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

@@ -1,0 +1,132 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-mono: "DM Mono", monospace;
+  --font-handwritten: "Caveat", cursive;
+
+  /* Custom palette colors matching the Polish restaurant requirements exactly: */
+  --color-brand-red: #C0392B;
+  --color-brand-red-deep: #962D22;
+  --color-brand-red-light: #D65F52;
+  --color-brand-red-pale: #F5D5D0;
+  --color-brand-cream: #FAF6F0;
+  --color-brand-cream-deep: #EDE5D8;
+  --color-brand-dark: #1C1C1C;
+  --color-brand-darker: #111111;
+  --color-brand-mid: #2A2A2A;
+  --color-brand-card-dark: #242424;
+  --color-brand-gold: #B8963A;
+  --color-brand-text-muted: #6A6058;
+  --color-brand-bg-section: #F3EDE3;
+}
+
+:root {
+  --bg: #FAF6F0;
+  --bg-section: #F3EDE3;
+  --bg-warm: #EDE5D8;
+  --bg-dark: #1C1C1C;
+  --bg-darker: #111111;
+  --bg-mid: #2A2A2A;
+  --bg-card-dark: #242424;
+  --dark: #1C1C1C;
+  --red: #C0392B;
+  --red-deep: #962D22;
+  --red-light: #D65F52;
+  --red-pale: #F5D5D0;
+  --red-subtle: rgba(192, 57, 43, 0.08);
+  --red-glow: rgba(192, 57, 43, 0.2);
+  --cream: #FAF6F0;
+  --cream-deep: #EDE5D8;
+  --gold: #B8963A;
+  --text: #1C1C1C;
+  --text-muted: #6A6058;
+  --text-light: #FAF6F0;
+  --text-pale: rgba(250, 246, 240, 0.72);
+  --border: rgba(28, 28, 28, 0.1);
+  --border-red: rgba(192, 57, 43, 0.2);
+  --border-dark: rgba(250, 246, 240, 0.08);
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Background Textures described in requirements */
+.texture-paper {
+  background-color: var(--bg);
+  background-image: repeating-linear-gradient(45deg, rgba(28, 28, 28, 0.015) 0px, rgba(28, 28, 28, 0.015) 1px, transparent 1px, transparent 5px),
+                    repeating-linear-gradient(-45deg, rgba(28, 28, 28, 0.015) 0px, rgba(28, 28, 28, 0.015) 1px, transparent 1px, transparent 5px);
+}
+
+.texture-paper-section {
+  background-color: var(--bg-section);
+  background-image: repeating-linear-gradient(45deg, rgba(28, 28, 28, 0.012) 0px, rgba(28, 28, 28, 0.012) 1px, transparent 1px, transparent 6px);
+}
+
+.texture-paper-warm {
+  background-color: var(--bg-warm);
+  background-image: repeating-linear-gradient(45deg, rgba(28, 28, 28, 0.015) 0px, rgba(28, 28, 28, 0.015) 1px, transparent 1px, transparent 5px);
+}
+
+.texture-lines-dark {
+  background-color: var(--bg-dark);
+  background-image: repeating-linear-gradient(0deg, rgba(250, 246, 240, 0.035) 0px, rgba(250, 246, 240, 0.035) 1px, transparent 1px, transparent 3px);
+}
+
+.texture-lines-darker {
+  background-color: var(--bg-darker);
+  background-image: repeating-linear-gradient(0deg, rgba(250, 246, 240, 0.03) 0px, rgba(250, 246, 240, 0.03) 1px, transparent 1px, transparent 4px);
+}
+
+/* Smooth custom transitions */
+.transition-custom {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom interactive underline */
+.link-hover-red {
+  position: relative;
+}
+
+.link-hover-red::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: var(--red);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.link-hover-red:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-section);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--red);
+}
+
